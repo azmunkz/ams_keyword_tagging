@@ -7,6 +7,7 @@ use Drupal\Core\Link;
 use Drupal\Core\Url;
 use Drupal\Core\Datetime\DateFormatterInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
+use Drupal\Core\Render\Markup;
 
 class KeywordListController extends ControllerBase {
 
@@ -75,7 +76,13 @@ class KeywordListController extends ControllerBase {
       '#type' => 'table',
       '#header' => $header,
       '#rows' => $rows,
+      '#attributes' => ['id' => 'ams-keywords-table'],
       '#empty' => $this->t('No keywords found.'),
+      '#attached' => [
+        'library' => [
+          'ams_keyword_tagging/datatable',
+        ],
+      ],
     ];
   }
 }

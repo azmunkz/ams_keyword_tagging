@@ -1,0 +1,13 @@
+datatable:
+  version: 1.x
+  css:
+    theme:
+      https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css: { type: external }
+      css/ams_keyword_datatable.css: {}
+  js:
+    https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js: { type: external, minified: true }
+    js/ams_keyword_datatable.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/once

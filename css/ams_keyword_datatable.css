@@ -1,0 +1,40 @@
+/* Match Drupal admin table appearance */
+.dataTables_wrapper {
+  margin-top: 1em;
+}
+
+.dataTables_filter label,
+.dataTables_length label {
+  font-weight: 600;
+  font-size: 0.9em;
+}
+
+.dataTables_length select,
+.dataTables_filter input {
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+table.dataTable thead th {
+  border-bottom: 2px solid #ddd;
+  background-color: #f8f8f8;
+}
+
+table.dataTable tbody td {
+  padding: 8px 10px;
+}
+
+.dataTables_paginate .paginate_button {
+  padding: 4px 10px;
+  border-radius: 3px;
+  margin: 0 2px;
+  background: #f0f0f0;
+  border: 1px solid #ccc;
+}
+
+.dataTables_paginate .paginate_button.current {
+  background: #0074bd;
+  color: white !important;
+  border-color: #0074bd;
+}

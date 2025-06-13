@@ -29,3 +29,19 @@ ams_keyword_tagging.upload_csv:
     _title: 'Upload Keywords (CSV)'
   requirements:
     _permission: 'administer ams keywords'
+
+ams_keyword_tagging.edit:
+  path: '/admin/config/ams/keywords/edit/{id}'
+  defaults:
+    _form: '\Drupal\ams_keyword_tagging\Form\KeywordEditForm'
+    _title: 'Edit Keyword'
+  requirements:
+    _permission: 'administer ams keywords'
+
+ams_keyword_tagging.delete:
+  path: '/admin/config/ams/keywords/delete/{id}'
+  defaults:
+    _form: '\Drupal\ams_keyword_tagging\Form\KeywordDeleteForm'
+    _title: 'Delete Keyword'
+  requirements:
+    _permission: 'administer ams keywords'

@@ -1,0 +1,31 @@
+ams_keyword_tagging.list:
+  path: '/admin/config/ams/keywords'
+  defaults:
+    _controller: '\Drupal\ams_keyword_tagging\Controller\KeywordListController::list'
+    _title: 'AMS Keywords'
+  requirements:
+    _permission: 'administer ams keywords'
+
+ams_keyword_tagging.add_single:
+  path: '/admin/config/ams/keywords/add'
+  defaults:
+    _form: '\Drupal\ams_keyword_tagging\Form\KeywordAddForm'
+    _title: 'Add Single Keyword'
+  requirements:
+    _permission: 'administer ams keywords'
+
+ams_keyword_tagging.add_bulk:
+  path: '/admin/config/ams/keywords/bulk-add'
+  defaults:
+    _form: '\Drupal\ams_keyword_tagging\Form\KeywordBulkAddForm'
+    _title: 'Add Multiple Keywords'
+  requirements:
+    _permission: 'administer ams keywords'
+
+ams_keyword_tagging.upload_csv:
+  path: '/admin/config/ams/keywords/upload'
+  defaults:
+    _form: '\Drupal\ams_keyword_tagging\Form\KeywordUploadForm'
+    _title: 'Upload Keywords (CSV)'
+  requirements:
+    _permission: 'administer ams keywords'

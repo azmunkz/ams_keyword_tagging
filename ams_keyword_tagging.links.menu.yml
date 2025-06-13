@@ -1,0 +1,24 @@
+ams_keyword_tagging.parent:
+  title: 'AMS Keyword Tagging'
+  description: 'Manage AMS keywords for monetization.'
+  route_name: ams_keyword_tagging.list
+  parent: system.admin_config
+  weight: 100
+
+ams_keyword_tagging.add_single_menu:
+  title: 'Add Single Keyword'
+  route_name: ams_keyword_tagging.add_single
+  parent: ams_keyword_tagging.parent
+  weight: 101
+
+ams_keyword_tagging.add_bulk_menu:
+  title: 'Add Multiple Keywords'
+  route_name: ams_keyword_tagging.add_bulk
+  parent: ams_keyword_tagging.parent
+  weight: 102
+
+ams_keyword_tagging.upload_csv_menu:
+  title: 'Upload CSV'
+  route_name: ams_keyword_tagging.upload_csv
+  parent: ams_keyword_tagging.parent
+  weight: 103

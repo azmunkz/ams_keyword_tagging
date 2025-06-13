@@ -1,0 +1,6 @@
+name: 'AMS Keyword Tagging'
+type: module
+description: 'Manage AMS keywords for monetization, sponsorship, and ad targeting.'
+core_version_requirement: ^11
+package: 'Custom'
+dependencies: []

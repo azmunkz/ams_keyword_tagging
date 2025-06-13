@@ -1,0 +1,66 @@
+<?php
+
+/**
+ * Implements hook_schema().
+ */
+function ams_keyword_tagging_schema() {
+  $schema['ams_keywords'] = [
+    'description' => 'Stores AMS keywords for monetization tagging.',
+    'fields' => [
+      'id' => [
+        'type' => 'serial',
+        'not null' => TRUE,
+      ],
+      'keyword' => [
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+      ],
+      'langcode' => [
+        'type' => 'varchar',
+        'length' => 16,
+        'default' => 'und',
+      ],
+      'group_label' => [
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => FALSE,
+      ],
+      'created' => [
+        'type' => 'int',
+        'not null' => TRUE,
+      ],
+      'updated' => [
+        'type' => 'int',
+        'not null' => TRUE,
+      ],
+    ],
+    'primary key' => ['id'],
+  ];
+
+  return $schema;
+}
+
+/**
+ * Implements hook_install().
+ */
+function ams_keyword_tagging_install() {
+  // Optional: insert default values here if needed.
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function ams_keyword_tagging_uninstall() {
+  \Drupal::database()->schema()->dropTable('ams_keywords');
+}
+
+/**
+ * Create ams_keywords table manually on first install.
+ */
+function ams_keyword_tagging_update_8001() {
+  $schema = ams_keyword_tagging_schema();
+  if (!\Drupal::database()->schema()->tableExists('ams_keywords')) {
+    \Drupal::database()->schema()->createTable('ams_keywords', $schema['ams_keywords']);
+  }
+}
